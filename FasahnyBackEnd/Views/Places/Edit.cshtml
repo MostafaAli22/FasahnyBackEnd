@@ -1,0 +1,77 @@
+﻿@model FasahnyBackEnd.Models.Place
+
+@{
+    ViewData["Title"] = "Edit";
+    ViewBag.Current = "Places"; 
+}
+
+<h1>Edit Place</h1>
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CityId" class="control-label"></label>
+                <select asp-for="CityId" class="form-control" asp-items="@ViewBag.CityId"></select>
+                <span asp-validation-for="CityId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descrition" class="control-label"></label>
+                <textarea  asp-for="Descrition" class="form-control" ></textarea>
+                <span asp-validation-for="Descrition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Thumb" class="control-label"></label>
+                <img src="~/Images/@Model.Thumb" width="190" />
+                <input type="file" asp-for="Thumb" class="form-control" />
+
+                <span asp-validation-for="Thumb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input asp-for="Latitude" class="form-control" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Langtitude" class="control-label"></label>
+                <input asp-for="Langtitude" class="form-control" />
+                <span asp-validation-for="Langtitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IndevidualPrice" class="control-label"></label>
+                <input asp-for="IndevidualPrice" class="form-control" />
+                <span asp-validation-for="IndevidualPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GroupPrice" class="control-label"></label>
+                <input asp-for="GroupPrice" class="form-control" />
+                <span asp-validation-for="GroupPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BackagePrice" class="control-label"></label>
+                <input asp-for="BackagePrice" class="form-control" />
+                <span asp-validation-for="BackagePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
