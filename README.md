@@ -39,13 +39,13 @@ dotnet run
 The application will be accessible at http://localhost:5000 (or another specified port).
 
 API Endpoints
-Endpoint 1: /api/endpoint-1
+Endpoint 1: /api/Places
 
-Description of functionality and usage.
-Endpoint 2: /api/endpoint-2
+Get list of all places 
+Endpoint 2: /api/Places/1
 
-Description of functionality and usage.
-...
+Get details for place ID=1 
+>>
 
 Contributing
 We welcome contributions to enhance and expand the Cairo Places Tourism System. If you would like to contribute, please follow our Contribution Guidelines.
