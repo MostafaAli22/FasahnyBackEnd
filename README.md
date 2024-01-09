@@ -20,8 +20,8 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/cairo-places-tourism.git
-cd cairo-places-tourism
+git clone https://github.com/MostafaAli22/FasahnyBackEnd
+cd ctourism-Travel-System-Backend
 Database Setup:
 
 Create a new MS SQL Server database.
